@@ -7,13 +7,20 @@
         function sayHello() {
                     alert("Hello World")
                 }
+        function AutoRefresh( t ) {
+                            setTimeout("location.reload(true);", t);
+
+                        }
     </script>
 </head>
-<body>
+<body onload="JavaScript:AutoRefresh(5000);">
 <script type="text/javascript">
     document.write("Click SayHello to see the result")
+
 </script>
 <input type="button"  onclick="sayHello()" value="SayHello">
+
+<a href="javascript:location.reload(true)">Refresh Page</a>
 
 </body>
 </html>
