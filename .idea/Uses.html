@@ -9,11 +9,20 @@
                 }
         function AutoRefresh( t ) {
                             setTimeout("location.reload(true);", t);
-
-                        }
+        }
+        function getConfirmation(){
+            var retVal = confirm("Do you want to continue ?");
+            if( retVal == true ){
+                document.write ("User wants to continue!");
+                return true;
+            }else{
+                Document.write ("User does not want to continue!");
+                return false;
+            }
+        }
     </script>
 </head>
-<body onload="JavaScript:AutoRefresh(5000);">
+<body onload="JavaScript:AutoRefresh(25000);">
 <script type="text/javascript">
     document.write("Click SayHello to see the result")
 
@@ -21,6 +30,10 @@
 <input type="button"  onclick="sayHello()" value="SayHello">
 
 <a href="javascript:location.reload(true)">Refresh Page</a>
+<input type="button" value="confirmation" onclick="getConfirmation()">
+<form>
+    <input type="button" value="Print" onclick="window.print()" />
+</form>
 
 </body>
 </html>
